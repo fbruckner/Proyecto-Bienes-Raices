@@ -35,7 +35,7 @@
         <main class="contenedor seccion contenido-centrado">
             <h2 class="fw-300 centrar-texto">Complete el formulario de contacto</h2>
 
-            <form action="">
+            <form class="contacto" action="">
                 
                 <fieldset>
                     <legend>Informacion Personal</legend>
@@ -53,6 +53,7 @@
                 <fieldset>
                      <legend>Informacion sobre la Propiedad</legend>
                      <label for="opciones">Vender o Comprar</label>
+
                      <select name="" id="opciones">
                         <option value="" disabled selected>-- Seleccione --</option>
                         <option value="vender">Vender</option>
@@ -65,14 +66,18 @@
                 <fieldset>
                     <legend>Contacto</legend>
                     <p>Como desea ser contactado</p>
-                    <label for="telefono">Telefono</label>
-                    <input type="radio" name="contacto" value="telefono" id="telefono">
-                    <label for="correo">E-Mail</label>
-                    <input type="radio" name="contacto" value="correo" id="correo">
-
+                    <div class="forma-contacto-radio">
+                        <label for="telefono">Telefono</label>
+                        <input type="radio" name="contacto" value="telefono" id="telefono">
+                        <label for="correo">E-Mail</label>
+                        <input type="radio" name="contacto" value="correo" id="correo">
+                    </div>
+                    
                     <p>Franja horaria para ser contactado</p>
-                    <input type="checkbox" name="franja" value="matutina"> de 9 a 13 hs
-                    <input type="checkbox" name="franja" value="vespertina"> de 14 a 18 hs
+                    <div class="forma-contacto-checkbox">
+                        <input type="checkbox" name="franja" value="matutina"> de 9 a 13 hs
+                        <input type="checkbox" name="franja" value="vespertina"> de 14 a 18 hs
+                    </div>
 
                     <p>Si selecciono Telefono, indique fecha y hora</p>
                     <label for="fecha">Fecha</label>
@@ -81,7 +86,8 @@
                     <input type="time" id="hora" min="09:00" max="18:00">
                 </fieldset>    
 
-                <input type="submit" value="Enviar">
+                <input type="submit" value="Enviar" class="boton boton-verde">
+                <input type="reset" value="Borrar" class="boton boton-rojo">
             </form>
         </main>
 
