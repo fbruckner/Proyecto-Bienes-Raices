@@ -36,12 +36,52 @@
             <h2 class="fw-300 centrar-texto">Complete el formulario de contacto</h2>
 
             <form action="">
-                <label for="nombre">Nombres: </label>
-                <input type="text" id="nombre" placeholder="Tus nombres" required>
-                <label for="apellido">Apellido: </label>
-                <input type="text" id="apellido" placeholder="Tu apellido" required>
-                <label for="email">Correo Electronico: </label>
-                <input type="email" id="email" placeholder="Tu email" required>
+                
+                <fieldset>
+                    <legend>Informacion Personal</legend>
+                    <label for="nombre">Nombres: </label>
+                    <input type="text" id="nombre" placeholder="Tus nombres" required>
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" id="apellido" placeholder="Tu apellido" required>
+                    <label for="email">Correo Electronico: </label>
+                    <input type="email" id="email" placeholder="Tu email" required>
+                    <label for="telefono">Telefono: </label>
+                    <input type="tel" id="telefono" placeholder="Tu telefono" required>
+                    <label for="mensaje">Mensaje: </label>
+                    <textarea name="mensaje" id="mensaje"></textarea>
+                </fieldset>
+                <fieldset>
+                     <legend>Informacion sobre la Propiedad</legend>
+                     <label for="opciones">Vender o Comprar</label>
+                     <select name="" id="opciones">
+                        <option value="" disabled selected>-- Seleccione --</option>
+                        <option value="vender">Vender</option>
+                        <option value="comprar">Comprar</option>
+                     </select>    
+
+                     <label for="presupuesto">Presupuesto U$s</label>
+                     <input type="number" name="presupuesto" id="presupuesto" min="0" max="100000" step="100">
+                </fieldset>
+                <fieldset>
+                    <legend>Contacto</legend>
+                    <p>Como desea ser contactado</p>
+                    <label for="telefono">Telefono</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+                    <label for="correo">E-Mail</label>
+                    <input type="radio" name="contacto" value="correo" id="correo">
+
+                    <p>Franja horaria para ser contactado</p>
+                    <input type="checkbox" name="franja" value="matutina"> de 9 a 13 hs
+                    <input type="checkbox" name="franja" value="vespertina"> de 14 a 18 hs
+
+                    <p>Si selecciono Telefono, indique fecha y hora</p>
+                    <label for="fecha">Fecha</label>
+                    <input type="date" id="fecha">
+                    <label for="hora">Hora</label>
+                    <input type="time" id="hora" min="09:00" max="18:00">
+                </fieldset>    
+
+                <input type="submit" value="Enviar">
             </form>
         </main>
 
