@@ -423,11 +423,14 @@ h4 {
 
 /*+ Pàginas Internas **/
 
-.contenido-nosotros {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 20px;
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-column-gap: 20px;
+    }
 }
+
 
 .texto-nosotros blockquote {
     font-weight: 900;
