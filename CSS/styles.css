@@ -211,20 +211,27 @@ h4 {
 
 /**Anuncios**/
 
-.contenedor-anuncios {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
+
 .anuncio {
-    flex-shrink: 0;
-    flex-basis: calc(33.3% - 5px);
     border-style: solid;
     border-color: #b5b5b5;
     border-width: 1px;
     background: #f5f5f5;
     margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+   .anuncio {
+        flex-shrink: 0;
+        flex-basis: calc(33.3% - 5px); 
+   }
 }
 
 .contenido-anuncio {
@@ -273,6 +280,8 @@ h4 {
     justify-content: flex-end;
 }
 
+/*+ Contacto Home **/
+
 .imagen-contacto {
     background-image: url(../img/encuentra.jpg);
     background-position: center center;
@@ -283,7 +292,7 @@ h4 {
 }
 
 .contenido-contacto {
-    flex: 1;
+    flex: 0 0 95%;
     color: #ffffff;
 }
 
@@ -291,23 +300,30 @@ h4 {
     font-size: 18px;
 }
 
-.seccion-inferior {
-    display: flex;
-    justify-content: space-between;
+/*+ Seccion inferior **/
+
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    } 
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 20px);
+    }
 }
 
-.seccion-inferior .blog {
-    flex-basis: 60%;
-}
-
-.seccion-inferior .testimoniales {
-    flex-basis: calc(40% - 20px);
-}
 
 .entrada-blog {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;   
+    }
 }
 
 .entrada-blog:last-of-type {
@@ -379,6 +395,8 @@ h4 {
     font-size: 16px;
 }
 
+/*+ Footer **/
+
 .site-footer {
     background-color: #333333;
     margin: 0;
@@ -389,8 +407,13 @@ h4 {
     padding-top: 30px;
     padding-bottom: 30px;
     scroll-padding-right: 0;
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .contenedor-footer{
+        display: flex;
+        justify-content: space-between; 
+    }
 }
 
 .copyright {
@@ -399,6 +422,7 @@ h4 {
 }
 
 /*+ Pàginas Internas **/
+
 .contenido-nosotros {
     display: grid;
     grid-template-columns: 50% 50%;
